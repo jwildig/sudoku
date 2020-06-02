@@ -1,25 +1,31 @@
 .board {
+    display: inline-block;
+    border: 2px solid black;
+}
+
+.blocks {
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns:  repeat(3, 150px);
-    grid-template-rows:   repeat(3, 150px)
-    /*border: 2px solid black;*/
+    grid-template-rows:   repeat(3, 150px);
 
 }
 
-.board > .block {
+
+.block {
     display: grid;
     height: 100%;
-    border: 2px solid black;
+    border: 1px solid black;
     grid-template-columns: repeat(3, 50px);
     grid-template-rows: repeat(3, 50px);
     border-collapse: collapse
 }
 
 
-.block > .box {
-    height: 100%;
+.box {
+    height: 50px;
+    width: 50px;
     cursor: pointer;
     border: 1px solid black;
 }
