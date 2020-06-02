@@ -5,8 +5,6 @@
 
 .blocks {
     display: grid;
-    justify-content: center;
-    align-items: center;
     grid-template-columns:  repeat(3, 150px);
     grid-template-rows:   repeat(3, 150px);
 
@@ -14,18 +12,21 @@
 
 
 .block {
-    display: grid;
     height: 100%;
     border: 1px solid black;
-    grid-template-columns: repeat(3, 50px);
-    grid-template-rows: repeat(3, 50px);
-    border-collapse: collapse
+    border-collapse: collapse;
+
 }
 
 
+
+
 .box {
-    height: 50px;
-    width: 50px;
+    width: 33%;
+    height: 33%;
     cursor: pointer;
     border: 1px solid black;
+    text-align: center;
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
 }

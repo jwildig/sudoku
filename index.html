@@ -5,168 +5,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sudoku Solver</title>
     <link href="style.css", rel = "stylesheet">
-    <script src = "script.js" defer></script>
+    <script src = "main.js" defer></script>
     
 </head>
 <body>
     <h1>Sudoku</h1>
     <div class = "board">
         <div class = "blocks">
-            <table class = 'block 00'>
+            <table class = 'block'>
                 <tr>
-                    <td class = 'box 00'></div>
-                    <td class = 'box 01'></div>
-                    <td class = 'box 02'></div>
+                    <td id=0000 class='box'></div>
+                    <td id=0001 class='box'></div>
+                    <td id=0002 class='box'></div>
                 </tr>
                 <tr>
-                    <td class = 'box 10'></div>
-                    <td class = 'box 11'></div>
-                    <td class = 'box 12'></div>
+                    <td id=0010 class='box'></div>
+                    <td id=0011 class='box'></div>
+                    <td id=0012 class='box'></div>
                 </tr>
                 <tr>
-                    <td class = 'box 20'></div>
-                    <td class = 'box 21'></div>
-                    <td class = 'box 22'></div>
-                </tr>
-            </table>
-            <table class = 'block 01'>
-                <tr>
-                    <td class = 'box 00'></div>
-                    <td class = 'box 01'></div>
-                    <td class = 'box 02'></div>
-                </tr>
-                <tr>
-                    <td class = 'box 10'></div>
-                    <td class = 'box 11'></div>
-                    <td class = 'box 12'></div>
-                </tr>
-                <tr>
-                    <td class = 'box 20'></div>
-                    <td class = 'box 21'></div>
-                    <td class = 'box 22'></div>
+                    <td id=0020 class='box'></div>
+                    <td id=0021 class='box'></div>
+                    <td id=0022 class='box'></div>
                 </tr>
             </table>
-            <table class = 'block 02'>
+            <table class = 'block'>
                 <tr>
-                    <td class = 'box 00'></div>
-                    <td class = 'box 01'></div>
-                    <td class = 'box 02'></div>
+                    <td id=0100 class='box'></div>
+                    <td id=0101 class='box'></div>
+                    <td id=0102 class='box'></div>
                 </tr>
                 <tr>
-                    <td class = 'box 10'></div>
-                    <td class = 'box 11'></div>
-                    <td class = 'box 12'></div>
+                    <td id=0110 class='box'></div>
+                    <td id=0111 class='box'></div>
+                    <td id=0112 class='box'></div>
                 </tr>
                 <tr>
-                    <td class = 'box 20'></div>
-                    <td class = 'box 21'></div>
-                    <td class = 'box 22'></div>
-                </tr>
-            </table>
-            <table class = 'block 10'>
-                <tr>
-                    <td class = 'box 00'></div>
-                    <td class = 'box 01'></div>
-                    <td class = 'box 02'></div>
-                </tr>
-                <tr>
-                    <td class = 'box 10'></div>
-                    <td class = 'box 11'></div>
-                    <td class = 'box 12'></div>
-                </tr>
-                <tr>
-                    <td class = 'box 20'></div>
-                    <td class = 'box 21'></div>
-                    <td class = 'box 22'></div>
+                    <td id=0120 class='box'></div>
+                    <td id=0121 class='box'></div>
+                    <td id=0122 class='box'></div>
                 </tr>
             </table>
-            <table class = 'block 11'>
+            <table class = 'block'>
                 <tr>
-                    <td class = 'box 00'></div>
-                    <td class = 'box 01'></div>
-                    <td class = 'box 02'></div>
+                    <td id=0200 class='box'></div>
+                    <td id=0201 class='box'></div>
+                    <td id=0202 class='box'></div>
                 </tr>
                 <tr>
-                    <td class = 'box 10'></div>
-                    <td class = 'box 11'></div>
-                    <td class = 'box 12'></div>
+                    <td id=0210 class='box'></div>
+                    <td id=0211 class='box'></div>
+                    <td id=0212 class='box'></div>
                 </tr>
                 <tr>
-                    <td class = 'box 20'></div>
-                    <td class = 'box 21'></div>
-                    <td class = 'box 22'></div>
-                </tr>
-            </table>
-            <table class = 'block 12'>
-                <tr>
-                    <td class = 'box 00'></div>
-                    <td class = 'box 01'></div>
-                    <td class = 'box 02'></div>
-                </tr>
-                <tr>
-                    <td class = 'box 10'></div>
-                    <td class = 'box 11'></div>
-                    <td class = 'box 12'></div>
-                </tr>
-                <tr>
-                    <td class = 'box 20'></div>
-                    <td class = 'box 21'></div>
-                    <td class = 'box 22'></div>
+                    <td id=0220 class='box'></div>
+                    <td id=0221 class='box'></div>
+                    <td id=0222 class='box'></div>
                 </tr>
             </table>
-            <table class = 'block 20'>
+            <table class = 'block'>
                 <tr>
-                    <td class = 'box 00'></div>
-                    <td class = 'box 01'></div>
-                    <td class = 'box 02'></div>
+                    <td id=1000 class='box'></div>
+                    <td id=1001 class='box'></div>
+                    <td id=1002 class='box'></div>
                 </tr>
                 <tr>
-                    <td class = 'box 10'></div>
-                    <td class = 'box 11'></div>
-                    <td class = 'box 12'></div>
+                    <td id=1010 class='box'></div>
+                    <td id=1011 class='box'></div>
+                    <td id=1012 class='box'></div>
                 </tr>
                 <tr>
-                    <td class = 'box 20'></div>
-                    <td class = 'box 21'></div>
-                    <td class = 'box 22'></div>
-                </tr>
-            </table>
-            <table class = 'block 21'>
-                <tr>
-                    <td class = 'box 00'></div>
-                    <td class = 'box 01'></div>
-                    <td class = 'box 02'></div>
-                </tr>
-                <tr>
-                    <td class = 'box 10'></div>
-                    <td class = 'box 11'></div>
-                    <td class = 'box 12'></div>
-                </tr>
-                <tr>
-                    <td class = 'box 20'></div>
-                    <td class = 'box 21'></div>
-                    <td class = 'box 22'></div>
+                    <td id=1020 class='box'></div>
+                    <td id=1021 class='box'></div>
+                    <td id=1022 class='box'></div>
                 </tr>
             </table>
-            <table class = 'block 22'>
+            <table class = 'block'>
                 <tr>
-                    <td class = 'box 00'></div>
-                    <td class = 'box 01'></div>
-                    <td class = 'box 02'></div>
+                    <td id=1100 class='box'></div>
+                    <td id=1101 class='box'></div>
+                    <td id=1102 class='box'></div>
                 </tr>
                 <tr>
-                    <td class = 'box 10'></div>
-                    <td class = 'box 11'></div>
-                    <td class = 'box 12'></div>
+                    <td id=1110 class='box'></div>
+                    <td id=1111 class='box'></div>
+                    <td id=1112 class='box'></div>
                 </tr>
                 <tr>
-                    <td class = 'box 20'></div>
-                    <td class = 'box 21'></div>
-                    <td class = 'box 22'></div>
+                    <td id=1120 class='box'></div>
+                    <td id=1121 class='box'></div>
+                    <td id=1122 class='box'></div>
                 </tr>
             </table>
+            <table class = 'block'>
+                <tr>
+                    <td id=1200 class='box'></div>
+                    <td id=1201 class='box'></div>
+                    <td id=1202 class='box'></div>
+                </tr>
+                <tr>
+                    <td id=1210 class='box'></div>
+                    <td id=1211 class='box'></div>
+                    <td id=1212 class='box'></div>
+                </tr>
+                <tr>
+                    <td id=1220 class='box'></div>
+                    <td id=1221 class='box'></div>
+                    <td id=1222 class='box'></div>
+                </tr>
+            </table>
+            <table class = 'block'>
+                <tr>
+                    <td id=2000 class='box'></div>
+                    <td id=2001 class='box'></div>
+                    <td id=2002 class='box'></div>
+                </tr>
+                <tr>
+                    <td id=2010 class='box'></div>
+                    <td id=2011 class='box'></div>
+                    <td id=2012 class='box'></div>
+                </tr>
+                <tr>
+                    <td id=2020 class='box'></div>
+                    <td id=2021 class='box'></div>
+                    <td id=2022 class='box'></div>
+                </tr>
+            </table>
+            <table class = 'block'>
+                <tr>
+                    <td id=2100 class='box'></div>
+                    <td id=2101 class='box'></div>
+                    <td id=2102 class='box'></div>
+                </tr>
+                <tr>
+                    <td id=2110 class='box'></div>
+                    <td id=2111 class='box'></div>
+                    <td id=2112 class='box'></div>
+                </tr>
+                <tr>
+                    <td id=2120 class='box'></div>
+                    <td id=2121 class='box'></div>
+                    <td id=2122 class='box'></div>
+                </tr>
+            </table>
+            <table class = 'block'>
+                <tr>
+                    <td id=2200 class='box'></div>
+                    <td id=2201 class='box'></div>
+                    <td id=2202 class='box'></div>
+                </tr>
+                <tr>
+                    <td id=2210 class='box'></div>
+                    <td id=2211 class='box'></div>
+                    <td id=2212 class='box'></div>
+                </tr>
+                <tr>
+                    <td id=2220 class='box'></div>
+                    <td id=2221 class='box'></div>
+                    <td id=2222 class='box'></div>
+                </tr>
+            </table>
+            
         </div>
     </div>
+
+    <button>solve</button>
 
 
     
