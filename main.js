@@ -1,11 +1,15 @@
-const boxes = document.querySelectorAll(".box")
+const boxes = document.querySelectorAll(".box");
+const solveButton = document.querySelector("[solve]");
+const clearButton = document.querySelector("[clear]");
+const fillButton = document.querySelector("[fill]");
 
 
 
+solveButton.addEventListener('click', complete);
+clearButton.addEventListener('click', clear);
+fillButton.addEventListener('click', fill);
 
 var selected;
-
-
 
 boxes.forEach(box => {
     box.addEventListener('click', () => {
@@ -13,6 +17,99 @@ boxes.forEach(box => {
         colorBoxes()
     })
 })
+
+
+function fill() {
+    document.getElementById("0000").innerHTML = "5";
+    document.getElementById("0001").innerHTML = "3";
+    document.getElementById("0010").innerHTML = "6";
+    document.getElementById("0021").innerHTML = "9";
+    document.getElementById("0022").innerHTML = "8";
+
+    document.getElementById("0101").innerHTML = "7";
+    document.getElementById("0110").innerHTML = "1";
+    document.getElementById("0111").innerHTML = "9";
+    document.getElementById("0112").innerHTML = "5";
+
+    document.getElementById("0221").innerHTML = "6";
+
+    document.getElementById("1000").innerHTML = "8";
+    document.getElementById("1010").innerHTML = "4";
+    document.getElementById("1020").innerHTML = "7";
+
+    document.getElementById("1101").innerHTML = "6";
+    document.getElementById("1110").innerHTML = "8";
+    document.getElementById("1112").innerHTML = "3";
+    document.getElementById("1121").innerHTML = "2";
+
+    document.getElementById("1202").innerHTML = "3";
+    document.getElementById("1212").innerHTML = "1";
+    document.getElementById("1222").innerHTML = "6";
+
+    document.getElementById("2001").innerHTML = "6";
+
+    document.getElementById("2110").innerHTML = "4";
+    document.getElementById("2111").innerHTML = "1";
+    document.getElementById("2112").innerHTML = "9";
+    document.getElementById("2121").innerHTML = "8";
+
+    document.getElementById("2200").innerHTML = "2";
+    document.getElementById("2201").innerHTML = "8";
+    document.getElementById("2212").innerHTML = "5";
+    document.getElementById("2221").innerHTML = "7";
+    document.getElementById("2222").innerHTML = "9";
+
+
+
+
+}
+
+function clear() {
+    var blockY, boxY, blockX, boxX;
+    for (blockY = 0; blockY < 3; blockY++) {
+        for(boxY = 0; boxY < 3; boxY++) {
+            for (blockX = 0; blockX < 3; blockX++) {
+                for(boxX = 0; boxX < 3; boxX++) {
+                    theBox = document.getElementById(blockY + "" + blockX + "" + boxY + "" + boxX)
+                    theBox.innerHTML = "";
+                }
+            } 
+        }
+    }
+}
+
+
+function complete() {
+    var m = [];
+    var theBox;
+    var myBoard;
+    var blockY, boxY, blockX, boxX;
+    for (blockY = 0; blockY < 3; blockY++) {
+        for(boxY = 0; boxY < 3; boxY++) {
+            m[blockY * 3 + boxY] = [];
+            for (blockX = 0; blockX < 3; blockX++) {
+                for(boxX = 0; boxX < 3; boxX++) {
+
+                    theBox = document.getElementById(blockY + "" + blockX + "" + boxY + "" + boxX)
+                    //console.log(theBox.innerHTML);
+                    m[blockY * 3 + boxY][blockX * 3 + boxX] = theBox.innerHTML.trim() ? parseInt(theBox.innerHTML) : 0;
+                }
+            } 
+        }
+    }
+
+    console.log(m);
+    myBoard = new board(m);
+    console.log(myBoard);
+
+    backtrack([], 0, myBoard);
+    
+
+}
+
+
+
+
 
 
 
@@ -88,7 +185,7 @@ window.onkeypress = function(event) {
 
         selected = document.getElementById(blockY + "" + blockX + "" + Y + "" + X);
         
-        console.log("moved");
+        //console.log("moved");
         this.colorBoxes();
      }
 
