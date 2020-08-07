@@ -1,4 +1,9 @@
+.interface {
+    display: inline-block;
+}
+
 .board {
+    margin-bottom: 10px;
     display: inline-block;
     border: 2px solid black;
 }
@@ -13,11 +18,22 @@
 
 .block {
     height: 100%;
+    width: 100%;
     border: 1px solid black;
     border-collapse: collapse;
 
 }
 
+
+button {
+    height: 30px;
+    width: 70px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
 
 
 
